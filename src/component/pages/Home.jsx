@@ -307,12 +307,11 @@ function Home() {
                 <li>
                   <a href="#">
                     <div className="steps1">
-                      <h3>+</h3>
                     </div>
                     <div className="step1">
                       <span>
                         <h4>Website</h4>
-                        <h2>Retro Camera</h2>
+                        <h2>Coin Cap</h2>
                       </span>
                       <svg
                         width="15"
@@ -334,12 +333,11 @@ function Home() {
                 <li>
                   <a href="">
                     <div className="steps2">
-                      <h3>+</h3>
                     </div>
                     <div className="step1">
                       <span>
                         <h4>Website</h4>
-                        <h2>Retro Camera</h2>
+                        <h2>Movie Land</h2>
                       </span>
                       <svg
                         width="15"
@@ -361,12 +359,11 @@ function Home() {
                 <li>
                   <a href="">
                     <div className="steps3">
-                      <h3>+</h3>
                     </div>
                     <div className="step1">
                       <span>
                         <h4>Website</h4>
-                        <h2>Retro Camera</h2>
+                        <h2>CargoNest</h2>
                       </span>
                       <svg
                         width="15"
@@ -390,12 +387,11 @@ function Home() {
                 <li>
                   <a href="">
                     <div className="steps4">
-                      <h3>+</h3>
                     </div>
                     <div className="step1">
                       <span>
                         <h4>Website</h4>
-                        <h2>Retro Camera</h2>
+                        <h2>BrushWork</h2>
                       </span>
                       <svg
                         width="15"
@@ -421,7 +417,7 @@ function Home() {
                     <div className="step1">
                       <span>
                         <h4>Website</h4>
-                        <h2>Retro Camera</h2>
+                        <h2>Insure</h2>
                       </span>
                       <svg
                         width="15"
@@ -448,7 +444,7 @@ function Home() {
                     <div className="step1">
                       <span>
                         <h4>Website</h4>
-                        <h2>Retro Camera</h2>
+                        <h2>Mc,anus</h2>
                       </span>
                       <svg
                         width="15"
