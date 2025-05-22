@@ -3,10 +3,16 @@ import me from "../../assets/me.jpg";
 import "../../styles/Home.scss";
 import users from "../../assets/user-02.jpg";
 import user from "../../assets/user-03.jpg";
-import { Outlet, Link } from "react-router-dom";
 
 function Home() {
   const nav = useRef(null);
+  const [isOpen, setIsOpen] = useState(false);
+
+  function myFunction(x) {
+  x.classList.toggle("change");
+  setIsOpen(prev => !prev)
+}
+
 
   useEffect(() => {
     const handleNav = () => {
@@ -50,39 +56,42 @@ function Home() {
               NCMANUS.Dev
             </a>
 
-            <div class="hamburger-menu">
+            <div class="hamburger-menu" onClick={(e) =>  myFunction(e.currentTarget)}>
               <div class="bar1"></div>
               <div class="bar2"></div>
               <div class="bar3"></div>
             </div>
           </div>
 
-          <div className="nav-res-links">
-            <ul>
-              <li>
-                <a href="">NCMANUS.Dev</a>
-              </li>
-              <li>
-                <a href="">INTRO</a>
-              </li>
-              <li>
-                <a href="">ABOUT</a>
-              </li>
-              <li>
-                <a href="">WORKS</a>
-              </li>
-              <li>
-                <a href="">
-                  SAY<i class="ri-hand"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
+          {isOpen && (
+            <div className="nav-res-links">
+              <ul>
+                <li>
+                  <a href="">NCMANUS.Dev</a>
+                </li>
+                <li>
+                  <a href="">INTRO</a>
+                </li>
+                <li>
+                  <a href="">ABOUT</a>
+                </li>
+                <li>
+                  <a href="">WORKS</a>
+                </li>
+                <li>
+                  <a href="">
+                    SAY<i class="ri-hand"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          )}
         </div>
       </header>
 
       <main>
         <section>
+
           <div className="hero">
             <div className="container">
               <h3>
@@ -103,23 +112,23 @@ function Home() {
                 </svg>
               </a>
             </div>
-
+            
             <div className="container1">
               <ul>
                 <li>
-                  <a href="#">Behance</a>
+                  <a href="https://www.facebook.com/profile.php?id=61574116185552">Facebook</a>
                 </li>
                 <li>
                   <a href="#">Twitter</a>
                 </li>
                 <li>
-                  <a href="#">Dribbble</a>
+                  <a href="#">Whatsapp</a>
                 </li>
                 <li>
                   <a href="#">Instagram</a>
                 </li>
               </ul>
-              <a href="#about">
+            <a href="#about">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -140,12 +149,8 @@ function Home() {
                 <span className="line"></span> <span>About</span>
               </h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur.
+              Hi, it's me Mcmanus a frontend  Developer who blends technical skill with creative vision.Specializing in HTML,CSS, and JavaScript,
+              to create clean,interactive, and responsive user interfaces that feel smooth on every screen. As part of the IGHUB Front-End Development track, they’re constantly leveling up—learning, creating, and pushing the limits of what the browser can do.
               </p>
               <button>DOWNLOAD CV</button>
             </div>
@@ -196,8 +201,7 @@ function Home() {
             <div className="max">
               <h3>Expertise</h3>
               <h2>
-                Visual Design Branding Identity UI Design Product Design
-                Prototyping Illustration
+                As a front-end developer with a computer science background, I specialize in turning ideas into responsive, user-focused web applications.
               </h2>
             </div>
 
@@ -215,16 +219,14 @@ function Home() {
                     <h3>Experience</h3>
                     <span>
                       <div>
-                        <h4>Dropbox</h4>
-                        <h5>Product Designer</h5>
-                        <h6>August 2019 - Present</h6>
+                        <h4>Front-End Developer</h4>
+                        <h5>IGHUB Front-End Development Track</h5>
+                        <h6>Jan 2025 – Present</h6>
                       </div>
                       <p>
-                        Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex
-                        in magna consectetur nisi cupidatat laboris esse eiusmod
-                        deserunt aute do quis velit esse sed Ut proident
-                        cupidatat nulla esse cillum laborum occaecat nostrud sit
-                        dolor incididunt amet est occaecat nisi.
+                        <li> Developing fully responsive websites using HTML, CSS, and JavaScript.</li>
+                        <li>Utilized React.js for building dynamic and interactive user interfaces.</li>
+                        <li> Implemented responsive design principles and best practices to ensure a seamless user experience across different devices and screen sizes. </li>
                       </p>
                     </span>
                   </div>
@@ -232,16 +234,14 @@ function Home() {
                   <div className="drop">
                     <span>
                       <div>
-                        <h4>Microsoft</h4>
-                        <h5>Frontend Developer</h5>
-                        <h6>August 2016 - July 2019</h6>
+                        <h4>Personal Learning Projects</h4>
+                        <h5> IGHUB Practice Environment</h5>
+                        <h6>2025 - present</h6>
                       </div>
                       <p>
-                        Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex
-                        in magna consectetur nisi cupidatat laboris esse eiusmod
-                        deserunt aute do quis velit esse sed Ut proident
-                        cupidatat nulla esse cillum laborum occaecat nostrud sit
-                        dolor incididunt amet est occaecat nisi.
+                        <li>Cloned Popular Websites like Netflix, Spotify, and Instagram homepages to practice layout precision and design responsiveness.</li>
+                        <li>Developed REST API-based apps (e.g., weather app, GitHub user finder) using fetch() to handle asynchronous data requests.</li>
+                        <li>Practiced JavaScript fundamentals by building interactive features like toggled menus, dark/light mode, and tabbed content</li>
                       </p>
                     </span>
                   </div>
@@ -260,16 +260,15 @@ function Home() {
                     <h3>Experience</h3>
                     <span>
                       <div>
-                        <h4>Dropbox</h4>
-                        <h5>Product Designer</h5>
-                        <h6>August 2019 - Present</h6>
+                        <h4>Optimization Practice</h4>
+                        <h5>Project-Based Learning Series</h5>
+                        <h6>2025 - present</h6>
                       </div>
                       <p>
-                        Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex
-                        in magna consectetur nisi cupidatat laboris esse eiusmod
-                        deserunt aute do quis velit esse sed Ut proident
-                        cupidatat nulla esse cillum laborum occaecat nostrud sit
-                        dolor incididunt amet est occaecat nisi.
+                        <li>Diagnosed and fixed layout shifts, broken grids, and inconsistent responsiveness across devices.</li>
+                        <li> Learned to use Chrome DevTools for debugging CSS, tracking performance bottlenecks, and analyzing page load behavior.</li>
+                        <li>Optimized images, minimized CSS/JS, and applied lazy loading to boost page speed.</li>
+                        <li>Applied ARIA attributes and semantic HTML to make projects screen-reader-friendly</li>
                       </p>
                     </span>
                   </div>
@@ -277,16 +276,14 @@ function Home() {
                   <div className="drop">
                     <span>
                       <div>
-                        <h4>Microsoft</h4>
-                        <h5>Frontend Developer</h5>
-                        <h6>August 2016 - July 2019</h6>
+                        <h4>Collaborative Coding Sessions</h4>
+                        <h5>IGHUB Peer Projects & Hackathons</h5>
+                        <h6>2025 - present</h6>
                       </div>
                       <p>
-                        Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex
-                        in magna consectetur nisi cupidatat laboris esse eiusmod
-                        deserunt aute do quis velit esse sed Ut proident
-                        cupidatat nulla esse cillum laborum occaecat nostrud sit
-                        dolor incididunt amet est occaecat nisi.
+                      <li>Participated in team-based challenges to build small web apps under time constraints</li>
+                      <li>Contributed to GitHub repos using branches, pull requests, and commit history tracking</li>
+                      <li>Conducted and received code reviews, learning to give constructive feedback and improve readability</li>
                       </p>
                     </span>
                   </div>
@@ -301,7 +298,7 @@ function Home() {
             <div>
               <h3>Recent Works</h3>
               <h1>
-                Here are some of my favorite projects br I have <br /> done
+                Here are some of my favorite projects, I have <br /> done
                 lately. Feel free to check them out.
               </h1>
             </div>
@@ -309,7 +306,7 @@ function Home() {
               <div className="pro1">
                 <li>
                   <a href="#">
-                    <div className="step">
+                    <div className="steps1">
                       <h3>+</h3>
                     </div>
                     <div className="step1">
@@ -336,7 +333,7 @@ function Home() {
                 </li>
                 <li>
                   <a href="">
-                    <div className="step">
+                    <div className="steps2">
                       <h3>+</h3>
                     </div>
                     <div className="step1">
@@ -363,7 +360,7 @@ function Home() {
                 </li>
                 <li>
                   <a href="">
-                    <div className="step">
+                    <div className="steps3">
                       <h3>+</h3>
                     </div>
                     <div className="step1">
@@ -392,7 +389,7 @@ function Home() {
               <div className="pro1">
                 <li>
                   <a href="">
-                    <div className="step">
+                    <div className="steps4">
                       <h3>+</h3>
                     </div>
                     <div className="step1">
@@ -419,8 +416,7 @@ function Home() {
                 </li>
                 <li>
                   <a href="">
-                    <div className="step">
-                      <h3>+</h3>
+                    <div className="steps5">
                     </div>
                     <div className="step1">
                       <span>
@@ -446,7 +442,7 @@ function Home() {
                 </li>
                 <li>
                   <a href="">
-                    <div className="step">
+                    <div className="steps6">
                       <h3>+</h3>
                     </div>
                     <div className="step1">
@@ -482,15 +478,13 @@ function Home() {
               <div className="gap">
                 <img src={users} alt="" />
                 <span>
-                  <h3>Tim Cook</h3>
-                  <h4>CEO,Apple</h4>
+                  <h3>NEC Global</h3>
+                  <h4>NEC Global Painting Services</h4>
                 </span>
               </div>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
-                aliquam adipisci perferendis tempore enim? Quaerat, dicta?
-                Repellat quia esse, quis harum adipisci reiciendis ea nesciunt
-                sit eaque excepturi quasi dignissimos. lor
+            I needed a clean and modern website to showcase my painting business, and Good Day  delivered exactly what I imagined—and more! The layout, colors, and responsiveness were perfect for attracting new clients.
+
               </p>
             </div>
 
@@ -498,15 +492,12 @@ function Home() {
               <div className="gap">
                 <img src={user} alt="" />
                 <span>
-                  <h3>Tim Cook</h3>
-                  <h4>CEO,Apple</h4>
+                  <h3>Samuel Bello</h3>
+                  <h4>Project Manager, TechFlare Solutions</h4>
                 </span>
               </div>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
-                aliquam adipisci perferendis tempore enim? Quaerat, dicta?
-                Repellat quia esse, quis harum adipisci reiciendis ea nesciunt
-                sit eaque excepturi quasi dignissimos. lor
+              We needed a responsive UI for our web app, and Good Day  came through. Their understanding of modern JavaScript and React is impressive. Everything worked flawlessly on all devices.
               </p>
             </div>
           </div>
@@ -517,8 +508,7 @@ function Home() {
             <div className="first">
               <h3 className="main">Get In Touch</h3>
               <h1>
-                I love to hear from you. Whether you have a question or just
-                want to chat about design, tech & art — shoot me a message.
+             I’m always excited to connect with fellow developers and potential clients.
               </h1>
             </div>
             <div className="could">
@@ -539,9 +529,7 @@ function Home() {
                   <span>Instagram</span>,<span>Github</span>
                 </h4>
               </div>
-             <Link to="*">
-               <button>SAY HELLO</button>
-                </Link>
+                <button>SAY HELLO</button>
             </div>
           </div>
         </section>
@@ -570,7 +558,6 @@ function Home() {
         </div>
       </footer>
 
-      <Outlet />
     </>
   );
 }

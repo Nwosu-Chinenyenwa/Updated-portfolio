@@ -19,6 +19,10 @@ $text-color: #5b5b5c;
 $footer-color: #5b5b5c;
 $footer-color1: #a1a1a2;
 
+::selection{
+  background-color:$nav-color-hover;
+  color: $bg-color;
+}
 .a{
     background-color: #8080802c;
 }
@@ -43,12 +47,14 @@ font-family: $font-1;
 font-size: 15px;
     box-shadow: $box-shadow;
   position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 2%;
+  transform: translateX(0%);
   top: 0;
   z-index: 10;
   color: black;
   background-color:#141516 ;
+   animation: fadeIn 0.4s ease-in;
+   transition: $transition-time;
 }
 
 nav ul{
@@ -116,6 +122,7 @@ nav ul li a:hover{
 .container1 ul{
   display: grid;
   gap: 60px;
+   animation: fadeIn 3s ease-in;
 }
 
 .container1 ul li{
@@ -282,6 +289,7 @@ color: black;
   gap: 30px;
   align-items: center;
   transition: all 0.3s ease;
+  color: $nav-color-hover;
 }
 
 .flex svg:hover {
@@ -348,8 +356,53 @@ padding-bottom: 250px;
   opacity: 10;
 }
 
-.step{
-  background-image: url(/src/assets/project1.jpg);
+.steps1{
+  background-image: url(/src/assets/id-1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+background-size: cover;
+width: 10vw;
+overflow: hidden;
+height: 20vh;
+}
+.steps2{
+  background-image: url(/src/assets/id-2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+background-size: cover;
+width: 10vw;
+overflow: hidden;
+height: 20vh;
+}
+.steps3{
+  background-image: url(/src/assets/id-3.png);
+  background-repeat: no-repeat;
+  background-position: center;
+background-size: cover;
+width: 10vw;
+overflow: hidden;
+height: 20vh;
+}
+.steps4{
+  background-image: url(/src/assets/id-4.png);
+  background-repeat: no-repeat;
+  background-position: center;
+background-size: cover;
+width: 10vw;
+overflow: hidden;
+height: 20vh;
+}
+.steps5{
+  background-image: url(/src/assets/id-5.png);
+  background-repeat: no-repeat;
+  background-position: center;
+background-size: cover;
+width: 10vw;
+overflow: hidden;
+height: 20vh;
+}
+.steps6{
+  background-image: url(/src/assets/id-6.png);
   background-repeat: no-repeat;
   background-position: center;
 background-size: cover;
@@ -359,15 +412,14 @@ height: 20vh;
 }
 
 .step h3{
-  color: black;
+/*   color: rgb(0, 0, 0);
   font-size: 20px;
 display: flex;
 transition: $transition-time;
 opacity: 0;
 justify-content: center;
 align-items: center;
-height: 150px;
-background-color: rgba(255, 255, 255, 0.368);
+background-color: rgba(255, 255, 255, 0.368); */
 }
 
 .projects li a:hover .step1 h2 {
@@ -559,7 +611,7 @@ color: white;
 
 .wax{
   display: grid;
-  gap: 60px;
+  gap: 50px;
 }
 
 .drop{
@@ -577,7 +629,7 @@ color: white;
 .drop span{
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 30px;
 }
 
 .drop h4{ 
@@ -756,12 +808,16 @@ transition: $transition-time;
   }
 }
 
-
-/* body:hover main{
-  color: red;
-} */
-
-
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 
 @media (max-width: 769px){
 nav{
@@ -789,10 +845,15 @@ border-bottom: 1px solid $color-border;
 }
 
 
+.hamburger-menu{
+  display: inline-block;
+  cursor: pointer;
+}
+
 .bar1, .bar2, .bar3 {
   width: 35px;
   height: 5px;
-  background-color:$menu;
+  background-color: #333;
   margin: 6px 0;
   transition: 0.4s;
 }
@@ -809,6 +870,7 @@ border-bottom: 1px solid $color-border;
 
 .nav-res-links {
     border-bottom: 1px solid $color-border;
+    display: block;
 }
 
 .nav-res-links ul{
@@ -831,9 +893,9 @@ padding: 6px;
     text-decoration: none;
     color: white;
         font-size: 16px;
-        color:  $nav-color-hover;
+        color:  white;
     font-weight: 400;
-    font-family:$font-2;
+    font-family:$font-1;
     padding: 3px;
 }
 
@@ -1080,6 +1142,35 @@ width: 70vw;
     font-family: $font-1;
     transition: $transition-time;
 }
+
+.clent {
+    display: grid
+;
+overflow: hidden;
+    gap: 40px;
+    justify-self: last left;
+    padding: 2px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 250px;
+}
+
+
+.gap span {
+    position: relative;
+    top: 0px;
+}
+
+.gap img {
+    width: 10vw;
+    border-radius: 200px;
+}
+
+.clent p {
+    color: #a1a1a2;
+    font-size: 21px;
+    width: 85vw;
+    font-family: "Public Sans", sans-serif;
+}
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -1218,11 +1309,17 @@ grid-template-columns: repeat(2,1fr);
 }
 
 
-
+ .clent p {
+    color: #a1a1a2;
+    font-size: 21px;
+    width: 45vw;
+    font-family: "Public Sans", sans-serif;
+} 
 
 }
 
 @media (min-width: 1024px) and (max-width:1366px) {
+
   nav ul li {
     text-decoration: none;
     padding: 25px;

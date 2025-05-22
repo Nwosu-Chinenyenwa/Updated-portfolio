@@ -4,13 +4,12 @@ import "../../styles/Load.scss";
 
 function Load() {
   const navigate = useNavigate();
-
+  const navigation = useNavigate();
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      navigate("/home");
+    const navigate = setTimeout(() => {
+      navigation("/home");
     }, 4000);
-
-    return () => clearTimeout(timeout);
+    return () => clearInterval(navigate);
   }, [navigate]);
 
   return (
